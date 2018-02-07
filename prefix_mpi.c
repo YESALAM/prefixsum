@@ -135,7 +135,8 @@ int main(int argc,char *argv[]){
 		MPI_Send(temp,chunk_size,MPI_INT,0,2,MPI_COMM_WORLD);
 
 	}
-
+	free(list);
+	free(temp);
 	MPI_Finalize();
 	return 0;	
 }
