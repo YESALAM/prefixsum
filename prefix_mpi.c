@@ -35,6 +35,7 @@ int* prefix_sum_list(int *list,int size){
 }
 
 void add_last_toAll(int *list,int size,int last_item){
+	#pragma omp parallel for
 	for(int i=0;i<size;i++){
 		list[i] = list[i]+last_item ;
 	}
